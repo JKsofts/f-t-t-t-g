@@ -1,0 +1,89 @@
+/* 
+  - the game board will scale with the vw.
+  - it could be achieved in many different approaches if more details was specified
+*/
+
+:root {
+  --game-height: 50vw;
+}
+
+#tic-tac-toe {
+  margin: auto;
+  width: calc(var(--game-height) * 0.56);
+  height: var(--game-height);
+}
+
+#tic-tac-toe h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.game li::-moz-selection,
+.game li::-webkit-selection {
+  background: none;
+  color: #000;
+}
+.game {
+  float: left;
+  padding: 0;
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--game-height) * 0.015);
+}
+.game li {
+  float: left;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin: auto;
+  margin-bottom: calc(var(--game-height) * 0.02);
+  font-size: calc(var(--game-height) * 0.1);
+  color: #ccc;
+  width: calc(var(--game-height) * 0.15);
+  line-height: calc(var(--game-height) * 0.15);
+}
+
+.game .disable {
+  text-transform: uppercase;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #fff;
+}
+
+.wins {
+  width: 100%;
+  text-align: center;
+}
+
+.input-append .win_times {
+  background: #fff;
+  width: calc(var(--game-height) * 0.15);
+}
+.input-append .win_text {
+  width: 52px;
+}
+
+#reset {
+  padding: 5px 10px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  clear: both;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  outline: none;
+  width: 204px;
+}
+
+.bottom-menu {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
